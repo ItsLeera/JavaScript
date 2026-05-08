@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Keyboard container */
+.keyboard {
+    background: #cfcfcf;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+#first_row button{
+    min-width: 46.3px;
+    height: 35px;
+}
+
+/* Each row */
+.row {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+/* Keys */
+button {
+    min-width: 52px;
+    height: 45px;
+    margin: 3px;
+    border: none;
+    border-radius: 6px;
+    background: #2b2b2b;
+    color: white;
+    font-size: 13px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.05),
+        inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.1s;
+}
+
+/* Key press effect */
+button:active {
+    transform: scale(0.95);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Secondary characters (top-right symbols) */
+.secondary {
+    position: absolute;
+    top: 5px;
+    left: 9px;
+    font-size: 10px;
+    color: #bbbbbbdd;
+}
+
+/* Special key sizes */
+
+/* esc */
+button:nth-child(1).key {
+    width: 60px;
+}
+
+
+/* ~ */
+/* .row:nth-child(2) button:first-child {
+    width: 45px;
+} */
+
+
+/* backspace */
+.row:nth-child(2) button:last-child {
+    width: 90px;
+}
+
+/* tab */
+.row:nth-child(3) button:first-child {
+    width: 77px;
+}
+
+
+/* \ */
+.row:nth-child(3) button:last-child {
+    width: 65px;
+}
+
+
+/* caps */
+.row:nth-child(4) button:first-child {
+    width: 100px;
+}
+
+
+/* enter */
+.row:nth-child(4) button:last-child {
+    width: 100px;
+}
+
+/* shift */
+.row:nth-child(5) button:first-child {
+    width: 129px;
+}
+
+/* shift */
+.row:nth-child(5) button:last-child {
+    width: 129px;
+}
+
+/* Spacebar */
+.row:nth-child(6) button:nth-child(5) {
+    width: 250px;
+}
+
+/* Ctrl / Alt / Fn sizing */
+.row:nth-child(6) button {
+    min-width: 60px;
+}
+
+/* Arrow / pg section */
+.pg {
+    display: flex;
+    flex-direction: column;
+}
+
+.pg button {
+    height: 21px;
+    font-size: 10px;
+}
+
+/* Empty buttons (like spacing keys) */
+button:empty {
+    background: transparent;
+    background-color: #1e1e1ee9;
+    box-shadow: none;
+}
+
+/* Slight metallic feel */
+.keyboard::before {
+    content: "";
+    display: block;
+    height: 15px;
+    background: repeating-linear-gradient(45deg,
+            #bdbdbd,
+            #bdbdbd 2px,
+            #d6d6d6 2px,
+            #d6d6d6 4px);
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
