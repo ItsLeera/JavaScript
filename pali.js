@@ -1,5 +1,5 @@
-function palidronCheck(str) {
-  return str.reverse() === str;
+function palidronCheck(str="") {
+//   return str.reverse === str;
 }
 
-console.log(pai("ebube"));
+console.log(palidronCheck("ebube"));
